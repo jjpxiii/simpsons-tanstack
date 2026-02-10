@@ -29,6 +29,7 @@ The search endpoint fetches all 60 pages (~1200 characters) from the external AP
 ### Custom Production Server (`app/server.ts`)
 
 TanStack Start generates a `fetch` handler, not a standalone HTTP server. The custom server entry:
+
 - Exports a default `{ fetch }` object for the dev server
 - In production (`NODE_ENV=production`), starts a srvx HTTP server on port 3000
 - Includes a static file middleware to serve `dist/client/` assets (workaround for a srvx `serveStatic` path separator bug on Windows)

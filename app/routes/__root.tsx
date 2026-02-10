@@ -1,6 +1,7 @@
 import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -9,7 +10,10 @@ export const Route = createRootRoute({
       { name: "viewport", content: "width=device-width, initial-scale=1.0" },
       { title: "Simpsons Search" },
     ],
-    links: [{ rel: "icon", href: "/logo.png" }],
+    links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "icon", href: "/logo.png" },
+    ],
   }),
   component: RootComponent,
 });
