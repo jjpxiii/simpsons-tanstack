@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-simpsons-yellow: #ffd90f;
+  --color-simpsons-blue: #009ddc;
+  --color-simpsons-red: #e3001b;
+  --font-sans: "Komika Axis", sans-serif;
+}
